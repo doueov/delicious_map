@@ -1,0 +1,51 @@
+/* 검색 바 */
+.search-add-bar {
+    position: absolute;
+    width: 650px;
+    height: 50px;
+    margin-top: 110px;
+    margin-left: 880px;
+    border-radius: 30px;
+    background-color: #c2c2c2;
+    z-index: 2;
+}
+
+/* 검색 결과 띄워주는 창 */
+.screen {
+    position: absolute;
+    width: 750px;
+    height: 700px;
+    margin-top: 85px;
+    margin-left: 830px;
+    border-radius: 50px;
+    background-color: #e4e4e4;
+}
+
+/* 검색 버튼 */
+.btn-search {
+    width: 26px;
+    height: 36px;
+    margin-top: 6px;
+    margin-right: 20px;
+    float: right;
+}
+
+/* 텍스트 입력바 */
+.input-bar {
+    width: 570px;
+    height: 20px;
+    margin-top: 14px;
+    margin-left: 20px;
+    border: none;
+    background: transparent; /* 배경을 투명하게 설정 */
+    outline: none; 
+    color: white;
+    font-size: 18px;;
+}
+
+/* 검색 전 입력해주세요 부분 */
+.input-bar::placeholder {
+    font-size: 17px;
+    color: #ffffff; 
+    opacity: 0.9; 
+}
