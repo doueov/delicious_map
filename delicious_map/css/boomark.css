@@ -1,0 +1,32 @@
+/* 사이즈 한번에 */
+.btn {
+    width: 200px; 
+    height: 100px; 
+    border-radius: 30px;
+    margin-top: 30px;
+}
+
+/* 눌린 타코야끼 */
+#none-tako {
+    margin-left: 200px;
+}
+
+/* 붕어빵 */
+#chk-fishbread {
+    margin-left: 210;
+}
+
+/* 안눌린 떡볶이 */
+#chk-tteok {
+    margin-left: 220;
+}
+
+
+.square {
+    width: 1600px;
+    height: 700px;
+    margin-top: -40px;
+    margin-left: 48px;
+    border-radius: 50px;
+    background-color: #E5E5E5;
+}
