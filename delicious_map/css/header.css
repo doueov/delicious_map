@@ -1,0 +1,35 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2D2B72; /* 헤더 배경색 설정 */
+    color: #fff; /* 헤더 텍스트 색상 설정 */
+}
+
+#home {
+    width: 50px;
+    height: 43px;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.right-section {
+    display: flex;
+    justify-content: flex-end; /* 아이콘들을 오른쪽으로 정렬 */
+    align-items: center;
+}
+
+.left-section img {
+    width: 30px; /* 이미지 너비 설정 */
+    height: 30px; /* 이미지 높이 설정 */
+    margin-right: 10px;
+}
+
+.right-section img {
+    width: 98px; /* 이미지 너비 설정 */
+    height: 41px; /* 이미지 높이 설정 */
+}
