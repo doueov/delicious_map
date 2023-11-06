@@ -3,114 +3,173 @@ body {
     background-color: #A2745A;
 }
 
-/* 배경 : 꾸밈사진 */
-.background-img {
-    position: relative;
-}
-
-/* 맛인드맵 텍스트 */
 .main-text {
     position: absolute;
     z-index: 9999;
-    left: 1100px; /* x 축 위치 */
-    top: 140px; /* y 축 위치 */
-    font-size: 87px;
+    left: 60%; 
+    top: 140px; 
+    font-size: 75px;
     font-weight: bold;
 }
 
-/* 맛인드맵에서 맵 부분만 색깔 변경 */
 .map-text {
     color: #345531; 
 }
 
-/* 맵 핀 아이콘 앞으로 오게하기 */
 .location-pin {
     position: relative;
-    z-index: 9999; /* 다른 요소보다 위에 나타나게 설정 */
+    z-index: 9999; 
 }
 
-/* 맵 핀 아이콘 위치 잡기 */
-/* 타코야끼 */
 #map_tacoyakki {
     position: absolute;
-    left: 460px;
+    left: 20%;
     top: 110px;
 }
 
-/* 붕어빵 */
 #map_fishbread {
     position: absolute;
-    left: 950px;
+    left: 65%;
     top: 250px;
 }
 
-/* 떡볶이 */
 #map_tteockbokki {
     position: absolute;
-    left: 300px;
+    left: 40%;
     top: 450px;
 }
 
-/* 지도 이미지 */
 #bg_map {
     position: absolute;
+    width: 90%;
+    height: 80%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 999;
 }
 
-/* 맛인드맵 배경 무늬 */
-/* 아랫쪽 */
 #bg_bottom {
     position: fixed;
     bottom: 0;
     left: 0;
 }
 
-/* 윗쪽 */
 #bg_top {
     position: fixed;
     top: 0;
     right: 0;
 }
 
-/* 반응형 */
-/* 데스크탑 */
-@media screen and (max-width: 720px) {
-
-}
-
-/* 태블릿 */
-@media screen and (max-width: 540px) {
-    /* 지도 이미지 */
+@media screen and (max-width: 1000px) {
     #bg_map {
-        width: 90%;
+        width: 95%;
+        height: 70%;
         top: 50%;
         left: 50%;
-        transform: rotate(90deg);
     }
-
-    /* 아이콘 */
-    /* 타코야끼 */
-    #map_takoyakki {
-        width: 230px;
-        height: 300px;
-    }
-    /* 붕어빵 */
-    #map_fishbread {
-        
-    }
-    /* 떡볶이 */
-    #map_tteokbokki {
-        
-    }
-
-    /* 맛인드맵 텍스트 */
     .main-text {
-        left: auto;
-        font-size: 50px;
+        position: absolute;
+        z-index: 9999;
+        left: 55%;
+        top: 23%; 
+        font-size: 5.4rem;
+        font-weight: bold;
+    }
+    #map_tacoyakki {
+        position: absolute;
+        left: 14rem;
+        top: 17rem;
+        width: 14.6%;
+    }
+    #map_fishbread {
+        position: absolute;
+        left: 38rem;
+        top: 25rem;
+        width: 17.3%;
+    }
+    #map_tteockbokki {
+        position: absolute;
+        left: 20rem;
+        top: 37rem;
+        width: 16%;
     }
 }
 
-/* 모바일 */
+@media screen and (max-width: 720px) {
+    #bg_map {
+        width: 780px;
+        height: 500px;
+        transform: rotate(-90deg);
+        top: 16.5rem;
+        left: -6rem;
+    }
+    .main-text {
+        position: absolute;
+        z-index: 9999;
+        left: 190px; /* x 축 위치 */
+        top: 120px; /* y 축 위치 */
+        font-size: 60px;
+        font-weight: bold;
+    }
+    #map_tacoyakki {
+        position: absolute;
+        left: 160px;
+        top: 223px;
+        width: 130px;
+        height: 235px;
+    }
+    #map_fishbread {
+        position: absolute;
+        left: 375px;
+        top: 200px;
+        width: 150px;
+        height: 247px;
+    }
+    #map_tteockbokki {
+        position: absolute;
+        left: 300px;
+        top: 540px;
+        width: 148px;
+        height: 235px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    #bg_map {
+        width: 800px;
+        height: 430px;
+        transform: rotate(-90deg);
+        top: 19rem;
+        left: -12.2rem;
+    }
+    .main-text {
+        position: absolute;
+        z-index: 9999;
+        left: 8rem; 
+        top: 9rem; 
+        font-size: 4.5rem;
+        font-weight: bold;
+    }
+    #map_tacoyakki {
+        position: absolute;
+        left: 83px;
+        top: 220px;
+        width: 130px;
+        height: 235px;
+    }
+    #map_fishbread {
+        position: absolute;
+        left: 270px;
+        top: 300px;
+        width: 150px;
+        height: 247px;
+    }
+    #map_tteockbokki {
+        position: absolute;
+        left: 210px;
+        top: 580px;
+        width: 148px;
+        height: 235px;
+    }
+}
