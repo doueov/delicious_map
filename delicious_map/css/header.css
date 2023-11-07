@@ -7,6 +7,10 @@ header {
     color: #fff; /* 헤더 텍스트 색상 설정 */
 }
 
+.right-section-sm {
+    display: none;
+}
+
 #home {
     width: 50px;
     height: 43px;
@@ -32,4 +36,37 @@ header {
 .right-section img {
     width: 98px; /* 이미지 너비 설정 */
     height: 41px; /* 이미지 높이 설정 */
+}
+
+/* 반응형 */
+/* 태블릿 */
+@media screen and (max-width: 1100px) {
+    .right-section-sm {
+        display: block;
+        display: flex;
+        align-items: center;
+    }
+
+    .right-section-sm img:not(#header_bookmark-sm) {
+        width: 60px;
+        height: 60px; 
+    }
+    
+    .right-section {
+        display: none;
+    }
+
+    #header_bookmark-sm {
+        width: 47px;
+        height: 60px;
+    }
+}
+
+/* 모바일 */
+@media screen and (max-width: 700px) {
+    .right-section-sm,
+    .right-section {
+        display: none;
+    }
+    
 }
