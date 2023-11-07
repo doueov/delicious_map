@@ -3,6 +3,14 @@ body {
     background-color: #A2745A;
 }
 
+/* 반응형 작은 아이콘 숨김 */
+#map_tacoyakki-sm,
+#map_fishbread-sm,
+#map_tteokbokki-sm {
+    visibility: collapse;
+}
+
+/* 아이콘 숨김 */
 .main-text {
     position: absolute;
     z-index: 9999;
@@ -33,7 +41,7 @@ body {
     top: 250px;
 }
 
-#map_tteockbokki {
+#map_tteokbokki {
     position: absolute;
     left: 40%;
     top: 450px;
@@ -88,7 +96,7 @@ body {
         top: 25rem;
         width: 17.3%;
     }
-    #map_tteockbokki {
+    #map_tteokbokki {
         position: absolute;
         left: 20rem;
         top: 37rem;
@@ -96,46 +104,65 @@ body {
     }
 }
 
-@media screen and (max-width: 720px) {
-    #bg_map {
-        width: 780px;
-        height: 500px;
-        transform: rotate(-90deg);
-        top: 16.5rem;
-        left: -6rem;
-    }
+@media screen and (max-width: 700px) {
     .main-text {
         position: absolute;
         z-index: 9999;
-        left: 190px; /* x 축 위치 */
+        left: 25%; /* x 축 위치 */
         top: 120px; /* y 축 위치 */
         font-size: 60px;
         font-weight: bold;
     }
+
+    #bg_map {
+        width: 700px;
+        height: 53%;
+        transform: rotate(-90deg);
+        top: 15.5rem;
+        left: -7%;
+    }
+    
     #map_tacoyakki {
         position: absolute;
         left: 160px;
         top: 223px;
-        width: 130px;
-        height: 235px;
+        width: 100px;
+        height: 180px;
     }
     #map_fishbread {
         position: absolute;
-        left: 375px;
-        top: 200px;
-        width: 150px;
-        height: 247px;
+        left: 340px;
+        top: 280px;
+        width: 118px;
+        height: 200px;
     }
-    #map_tteockbokki {
+    #map_tteokbokki {
         position: absolute;
         left: 300px;
         top: 540px;
-        width: 148px;
-        height: 235px;
+        width: 120px;
+        height: 200px;
     }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 580px) {
+    .location-pin-sm {
+        position: relative;
+        z-index: 9999; 
+    }
+
+    #map_tacoyakki-sm,
+    #map_fishbread-sm,
+    #map_tteokbokki-sm {
+        visibility: visible;
+    }
+    
+    #map_tacoyakki,
+    #map_fishbread,
+    #map_tteokbokki {
+        visibility: collapse;
+    }
+
     #bg_map {
         width: 800px;
         height: 430px;
@@ -143,6 +170,7 @@ body {
         top: 19rem;
         left: -12.2rem;
     }
+
     .main-text {
         position: absolute;
         z-index: 9999;
@@ -151,25 +179,21 @@ body {
         font-size: 4.5rem;
         font-weight: bold;
     }
-    #map_tacoyakki {
+
+    #map_tacoyakki-sm {
         position: absolute;
-        left: 83px;
-        top: 220px;
-        width: 130px;
-        height: 235px;
+        top: 205px;
+        left: 20%;
     }
-    #map_fishbread {
+    #map_fishbread-sm {
         position: absolute;
-        left: 270px;
-        top: 300px;
-        width: 150px;
-        height: 247px;
+        top: 400px;
+        left: 50%;
     }
-    #map_tteockbokki {
+    #map_tteokbokki-sm {
         position: absolute;
-        left: 210px;
-        top: 580px;
-        width: 148px;
-        height: 235px;
+        top: 600px;
+        left: 25%;
     }
+
 }
