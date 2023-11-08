@@ -13,20 +13,49 @@
 
 /* 붕어빵 */
 #chk-fishbread {
-    margin-left: 210;
+    margin-left: 210px;
 }
 
 /* 안눌린 떡볶이 */
 #chk-tteok {
-    margin-left: 220;
+    margin-left: 220px;
 }
 
-
 .square {
-    width: 1600px;
+    width: 90%;
     height: 700px;
     margin-top: -40px;
-    margin-left: 48px;
+    margin-left: 43px;
     border-radius: 50px;
     background-color: #E5E5E5;
+}
+
+/* 태블릿 */
+@media screen and (max-width: 1500px) {
+    .btn {
+        width: 163px; 
+        height: 86px; 
+        border-radius: 30px;
+        margin-top: 30px;
+    }
+}
+
+/* 모바일 */
+@media screen and (max-width: 1100px) {
+    .btn {
+        width: 145px; 
+        height: 78px; 
+        border-radius: 30px;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .btn {
+        width: 145px; 
+        height: 78px; 
+        border-radius: 30px;
+        margin-top: 30px;
+    }
+    /* 가운데로하기 */
 }
