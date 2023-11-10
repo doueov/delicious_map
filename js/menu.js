@@ -6,16 +6,23 @@ document.addEventListener('DOMContentLoaded', function() {
     menu.addEventListener('click', function() {
         if (menuList.style.display === 'block') {
             menuList.style.display = 'none';
-            menuImage.src = 'img/menu.png'; // 변경된 부분: 이미지 경로 변경
-            menuImage.alt = '메뉴바'; // 변경된 부분: alt 텍스트 변경
+            menuImage.src = 'img/menu.png';
+            menuImage.alt = '메뉴바';
         } else {
             menuList.style.display = 'block';
             var links = menuList.querySelectorAll('a');
             links.forEach(function(link) {
                 link.style.display = 'block';
             });
-            menuImage.src = 'img/menu-cancel.png'; // 변경된 부분: 이미지 경로 변경
-            menuImage.alt = '메뉴취소'; // 변경된 부분: alt 텍스트 변경
+            menuImage.src = 'img/menu-cancel.png';
+            menuImage.alt = '메뉴취소';
+        }
+    });
+
+    // 추가: 화면 크기가 700px 이하이고 메뉴가 닫혀있는 경우 menu-list를 감춤
+    window.addEventListener('resize', function() {
+        if (window.innerWidth <= 700 && menuList.style.display !== 'block') {
+            menuList.style.display = 'none';
         }
     });
 });
