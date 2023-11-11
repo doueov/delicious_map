@@ -30,6 +30,23 @@
     background-color: #E5E5E5;
 }
 
+/* 텍스트 */
+#heart1,
+#heart2,
+#heart3,
+#heart4,
+#heart5,
+#heart6,
+#heart7 {
+    width: 2%;
+    margin-left: 90%;
+    margin-top: -1%;
+}
+.bookmark-list {
+    font-size: 25px;
+    margin-left: 5%;
+}
+
 /* 태블릿 */
 @media screen and (max-width: 1500px) {
     .btn {

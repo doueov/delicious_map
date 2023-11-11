@@ -52,6 +52,8 @@
         <a href="bookmark-tacoyakki.html"><h1>북마크</h1></a>
     </div>
 
+    
+
    <!-- 타코야끼 : 눌림 -->
    <div class="btn-bookmark">
         <a href="bookmark-tacoyakki.html"><img src="img/chk_takoyakki.png" alt="눌린 타코야끼" id="none-tako" class="btn"></a>
@@ -60,9 +62,23 @@
         <!-- 떡볶이 : 안눌림 -->
         <a href="bookmark-tteokbokki.html"><img src="img/none_tteokbokki.png" alt="안눌린 떡볶이" id="chk_tteok" class="btn"></a>
    </div>
-   <!-- 내용 보여주는 판떼기 -->
-   <div class="square" class="element-covering-square"></div>
 
+   <!-- 내용 보여주는 판떼기 -->
+   <div class="square" class="element-covering-square">
+        <!-- 북마크 내용 -->
+        <div class="bookmark-list">
+            <br><br>
+            <div class="txt1" id="txt1">서울 관악구 신림동 신림역 1번 출구<a href="#" onclick="removeElement('txt1')"><img src="img/fill-heart.png" id="heart1"><br></a> </div>
+            <div class="txt2" id="txt2">서울 관악구 신림동 신림역 2번 출구<a href="#" onclick="removeElement('txt2')"><img src="img/fill-heart.png" id="heart2"><br></a> </div>
+            <div class="txt3" id="txt3">서울 관악구 신림동 신림역 3번 출구<a href="#" onclick="removeElement('txt3')"><img src="img/fill-heart.png" id="heart3"><br></a> </div>
+            <div class="txt4" id="txt4">서울 관악구 신림동 신림역 4번 출구<a href="#" onclick="removeElement('txt4')"><img src="img/fill-heart.png" id="heart4"><br></a> </div>
+            <div class="txt5" id="txt5">서울 관악구 신림동 신림역 5번 출구<a href="#" onclick="removeElement('txt5')"><img src="img/fill-heart.png" id="heart5"><br></a> </div>
+            <div class="txt6" id="txt6">서울 관악구 신림동 신림역 6번 출구<a href="#" onclick="removeElement('txt6')"><img src="img/fill-heart.png" id="heart6"><br></a> </div>
+            <div class="txt7" id="txt7">서울 관악구 신림동 신림역 7번 출구<a href="#" onclick="removeElement('txt7')"><img src="img/fill-heart.png" id="heart7"><br></a> </div>
+        </div>
+   </div>
+
+   <script src="js/remove.js"></script>
    <script src="js/menu.js"></script>
 </body>
 </html>
