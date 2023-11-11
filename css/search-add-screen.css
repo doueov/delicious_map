@@ -129,7 +129,7 @@ iframe {
 
     /* 검색 결과 텍스트 */
     .search-result {
-        color: white;
+        color: #000000;
         font-size: 18px;
         margin-left: 5%;
         margin-top: 80px;
@@ -147,8 +147,35 @@ iframe {
         margin-left: 8%;
         border-radius: 30px;
         background-color: #c2c2c2;
-        z-index: 2;
     }
+
+    /* 추가, 북마크 팝업창 */
+.add-bookmark-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+    border-radius: 30px;
+    background-color: #bcc2cf;
+    z-index: 10; /* 더 큰 z-index 값으로 설정 */
+}
+
+/* 추가, 북마크 버튼 */
+#add-map,
+#add-bookmark {
+    width: 75%;
+    margin-left: 13%;
+    margin-top: 10px;
+    z-index: 11; /* 더 큰 z-index 값으로 설정 */
+}
+
+#add-map {
+    margin-top: 20%;
+}
+
 }
 
 /* 모바일 */
