@@ -65,8 +65,15 @@
 
     <!-- 추가, 북마크 -->
     <div class="add-bookmark-popup">
-        <a href="#" onclick="addMapClicked()"><img src="img/add_map.png" id="add-map" alt="Add to Map"></a>
-        <a href="#" onclick="addBookmarkClicked()"><img src="img/add_bookmark.png" id="add-bookmark" alt="Add to Bookmark"></a>
+        <!-- <a href="#" onclick="addMapClicked()"><img src="img/add_map.png" id="add-map" alt="Add to Map"></a>
+        <a href="#" onclick="addBookmarkClicked()"><img src="img/add_bookmark.png" id="add-bookmark" alt="Add to Bookmark"></a> -->
+        <a href="#" onclick="addMapClicked('신림역 2번 출구, 서울 관악구 신림동')">
+            <img src="img/add_map.png" id="add-map" alt="지도에 추가">
+        </a>
+        
+        <a href="#" onclick="addBookmarkClicked('신림역 4번 출구, 서울 관악구 신림동')">
+            <img src="img/add_bookmark.png" id="add-bookmark" alt="북마크에 추가">
+        </a>
     </div>
 
     <!-- 지도 -->
