@@ -50,17 +50,37 @@
         <a href="bookmark-tacoyakki.html"><h1>북마크</h1></a>
     </div>
 
-    <!-- 지도 -->
-
-   
     <!-- 검색, 추가 창 -->
-    <div class="search-add-bar">
-        <input type="text" name="검색바" class="input-bar" placeholder="검색어를 입력해주세요"">
-        <img src="img/btn-search.png" alt="검색버튼" class="btn-search" >
+    <div class="search">
+        <div class="search-add-bar">
+            <input type="text" name="검색바" class="input-bar" placeholder="검색어를 입력해주세요">
+            <a href="#"><img src="img/btn-search.png" alt="검색버튼" class="btn-search"></a>
+        </div>
+    <!-- 검색, 추가 화면 -->
+        <div class="screen">
+            <!-- 검색 결과 출력 -->
+            <div class="search-result"></div>
+        </div>
     </div>
-   <!-- 검색, 추가 화면 -->
-    <div class="screen"></div>
+
+    <!-- 추가, 북마크 -->
+    <div class="add-bookmark-popup">
+        <!-- <a href="#" onclick="addMapClicked()"><img src="img/add_map.png" id="add-map" alt="Add to Map"></a>
+        <a href="#" onclick="addBookmarkClicked()"><img src="img/add_bookmark.png" id="add-bookmark" alt="Add to Bookmark"></a> -->
+        <a href="#" onclick="addMapClicked('신림역 2번 출구, 서울 관악구 신림동')">
+            <img src="img/add_map.png" id="add-map" alt="지도에 추가">
+        </a>
+        
+        <a href="#" onclick="addBookmarkClicked('신림역 4번 출구, 서울 관악구 신림동')">
+            <img src="img/add_bookmark.png" id="add-bookmark" alt="북마크에 추가">
+        </a>
+    </div>
+
+    <!-- 지도 -->
+    <iframe src="https://map.naver.com/p?c=15.00,0,0,0,dh" frameborder="0"></iframe>
     
+    <script src="js/popup.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/data.js"></script>
 </body>
 </html>
