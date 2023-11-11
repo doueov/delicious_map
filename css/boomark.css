@@ -38,14 +38,15 @@
 #heart5,
 #heart6,
 #heart7 {
-    width: 2%;
+    width: 30px;
+    height: 30px;
     margin-left: 90%;
-    margin-top: -1%;
 }
 .bookmark-list {
     font-size: 25px;
     margin-left: 5%;
 }
+
 
 /* 태블릿 */
 @media screen and (max-width: 1500px) {
@@ -94,5 +95,22 @@
 
     #none-tako {
         margin-left: 19.3%;
+    }
+
+    #heart1,
+    #heart2,
+    #heart3,
+    #heart4,
+    #heart5,
+    #heart6,
+    #heart7 {
+        width: 20px;
+        height: 20px;
+        margin-left: 90%;
+    }
+    .bookmark-list {
+        margin-top: 10px;
+        font-size: 15px;
+        margin-left: 5%;
     }
 }

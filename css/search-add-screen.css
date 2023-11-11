@@ -49,10 +49,6 @@
     color: #ffffff; 
     opacity: 0.9; 
 }
-
-.menu-list > a {
-    display: none;
-}
   
 .search-result {
     font-size: 20px;
@@ -106,8 +102,9 @@ iframe {
 /* 메뉴바 */
 @media screen and (max-width: 700px) {
     .menu-list {
-        display: none;
-        width: 100%;
+        position: absolute;
+        z-index: 1;
+        width: 96.8%;
         height: 245px;
         margin-top: -15px;
         border-radius: 0px 0px 30px 30px;
@@ -116,7 +113,9 @@ iframe {
     }
 
     .menu-list > a {
+        color: #fff;
         display: none;
         text-align: center;
+        text-decoration: none;
     }
 }
