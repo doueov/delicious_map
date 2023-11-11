@@ -1,10 +1,10 @@
 /* 검색 바 */
 .search-add-bar {
     position: absolute;
-    width: 650px;
+    width: 40%;
     height: 50px;
     margin-top: 110px;
-    margin-left: 880px;
+    margin-left: 52.7%;
     border-radius: 30px;
     background-color: #c2c2c2;
     z-index: 2;
@@ -13,10 +13,10 @@
 /* 검색 결과 띄워주는 창 */
 .screen {
     position: absolute;
-    width: 750px;
+    width: 45%;
     height: 650px;
     margin-top: 85px;
-    margin-left: 830px;
+    margin-left: 50%;
     border-radius: 50px;
     background-color: #e4e4e4;
 }
@@ -32,7 +32,7 @@
 
 /* 텍스트 입력바 */
 .input-bar {
-    width: 570px;
+    width: 80%;
     height: 20px;
     margin-top: 14px;
     margin-left: 20px;
@@ -51,11 +51,13 @@
 }
   
 .search-result {
+    color: white;
     font-size: 20px;
     margin-left: 7.5%;
-    margin-top: 10%;
+    margin-top: 30px;
     line-height: 2;
     padding: 1%;
+    text-decoration: none;
 }
 
 .add-bookmark-popup {
@@ -83,12 +85,16 @@
 
 iframe {
     position: absolute;
-    width: 650px;
+    width: 40%;
     height: 650px;
     margin-left: 6.5%;
     margin-top: 85px;
     border-radius: 50px;
     z-index: -1;
+}
+
+.menu-list {
+    display: none;
 }
 
 /* 태블릿 */
