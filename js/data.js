@@ -27,9 +27,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // 결과 표시.
     if (results.length > 0) {
       // 결과가 있으면 각 위치를 줄 바꿈과 함께 표시.
-      searchResultElement.innerHTML = results.map(function (result) {
-        // 개행을 추가하여 각 위치가 새로운 줄에 표시되도록 변경합니다.
-        return result.location + '<br>';
+      searchResultElement.innerHTML = results.map(function (result, index) {
+        // a 태그로 감싸주고 href를 #로 설정하여 일단 클릭할 수 있도록 만듭니다.
+        return '<a href="#" class="result-link" data-index="' + index + '">' + result.location + '</a><br>';
       }).join('');
 
       // .bookmark 클래스를 가진 요소 비우기.
@@ -40,5 +40,29 @@ document.addEventListener("DOMContentLoaded", function () {
       // .bookmark 클래스를 가진 요소 비우기.
       bookmarkElement.innerHTML = '';
     }
+  });
+
+  // 클릭한 위치의 인덱스를 저장할 변수
+  var selectedIndex;
+
+  // 검색 결과에서 각 링크에 대한 클릭 이벤트 리스너 추가
+  document.addEventListener('click', function (event) {
+    if (event.target.classList.contains('result-link')) {
+      // 클릭한 위치의 인덱스를 가져옴
+      selectedIndex = event.target.dataset.index;
+      
+      // 클릭한 위치에 해당하는 정보를 가져옴
+      var selectedResult = list[selectedIndex].location;
+      
+      // add-bookmark-popup 클래스를 가진 요소를 가져와서 내용을 설정하고 보이도록 함
+      var addBookmarkPopup = document.querySelector('.add-bookmark-popup');
+      // addBookmarkPopup.innerHTML = '선택한 위치: ' + selectedResult;
+      addBookmarkPopup.style.display = 'block';
+    }
+  });
+
+  // 추가, 북마크 창을 클릭하면 숨김
+  document.querySelector('.add-bookmark-popup').addEventListener('click', function () {
+    this.style.display = 'none';
   });
 });
