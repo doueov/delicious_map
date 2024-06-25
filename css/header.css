@@ -3,8 +3,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #2D2B72; /* 헤더 배경색 설정 */
-    color: #fff; /* 헤더 텍스트 색상 설정 */
+    background-color: #2D2B72;
+    color: #fff;
 }
 
 .right-section-sm,
@@ -28,19 +28,19 @@ header {
 
 .right-section {
     display: flex;
-    justify-content: flex-end; /* 아이콘들을 오른쪽으로 정렬 */
+    justify-content: flex-end;
     align-items: center;
 }
 
 .left-section img {
-    width: 30px; /* 이미지 너비 설정 */
-    height: 30px; /* 이미지 높이 설정 */
+    width: 30px;
+    height: 30px;
     margin-right: 10px;
 }
 
 .right-section img {
-    width: 98px; /* 이미지 너비 설정 */
-    height: 41px; /* 이미지 높이 설정 */
+    width: 98px;
+    height: 41px;
 }
 
 /* 반응형 */
