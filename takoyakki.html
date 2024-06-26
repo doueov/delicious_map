@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,6 @@
     <title>맛인드맵</title>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/search-add-screen.css">
-
     <link rel="icon" href="img/header-takoyakki-sm.png" type="image/png">
 </head>
 
@@ -20,7 +20,7 @@
             <h1 id="title">맛인드맵</h1>
             <h1 id="title-sm">타코야끼</h1>
         </div>
-            
+
         <!-- 헤더 오른쪽 아이콘 -->
         <div class="right-section">
             <a href="bookmark-tacoyakki.html"><img src="img/header_bookmark.png" alt="찜"></a> &nbsp;&nbsp;
@@ -28,28 +28,39 @@
             <a href="fishbread.html"><img src="img/header_fishbread.png" alt="붕어빵"></a> &nbsp;&nbsp;
             <a href="tteokbokkii.html"><img src="img/header_tteokbokkii.png" alt="떡볶이"></a>
         </div>
-        
+
         <!-- 태블릿 반응형 아이콘 -->
         <div class="right-section-sm">
-            <a href="bookmark-tacoyakki.html"><img src="img/header_bookmark-sm.png" alt="찜" id="header_bookmark-sm"></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="takoyakki.html"><img src="img/header_takoyakki-chk.png" alt="타코야끼"></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="fishbread.html"><img src="img/header_fishbread-sm.png" alt="붕어빵"></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="bookmark-tacoyakki.html"><img src="img/header_bookmark-sm.png" alt="찜" id="header_bookmark-sm"></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="takoyakki.html"><img src="img/header_takoyakki-chk.png" alt="타코야끼"></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="fishbread.html"><img src="img/header_fishbread-sm.png" alt="붕어빵"></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="tteokbokkii.html"><img src="img/header_tteokbokki-sm.png" alt="떡볶이"></a>
         </div>
 
         <!-- 메뉴 -->
-        <div class="menu"> 
+        <div class="menu">
             <a href="#"><img src="img/menu.png" alt="메뉴바"></a>
         </div>
-       </header>
+    </header>
 
-       <!-- 메뉴 리스트 -->
-       <div class="menu-list">
-            <br><a href="takoyakki.html"><h1>타코야끼</h1></a>
-            <a href="fishbread.html"><h1>붕어빵</h1></a>
-            <a href="tteokbokkii.html"><h1>떡볶이</h1></a>
-            <a href="bookmark-tacoyakki.html"><h1>북마크</h1></a>
-        </div>
+    <!-- 메뉴 리스트 -->
+    <div class="menu-list">
+        <br><a href="takoyakki.html">
+            <h1>타코야끼</h1>
+        </a>
+        <a href="fishbread.html">
+            <h1>붕어빵</h1>
+        </a>
+        <a href="tteokbokkii.html">
+            <h1>떡볶이</h1>
+        </a>
+        <a href="bookmark-tacoyakki.html">
+            <h1>북마크</h1>
+        </a>
+    </div>
 
     <!-- 검색, 추가 창 -->
     <div class="search">
@@ -57,7 +68,7 @@
             <input type="text" name="검색바" class="input-bar" placeholder="검색어를 입력해주세요">
             <a href="#"><img src="img/btn-search.png" alt="검색버튼" class="btn-search"></a>
         </div>
-       <!-- 검색, 추가 화면 -->
+        <!-- 검색, 추가 화면 -->
         <div class="screen">
             <!-- 검색 결과 출력 -->
             <div class="search-result"></div>
@@ -66,22 +77,104 @@
 
     <!-- 추가, 북마크 -->
     <div class="add-bookmark-popup">
-        <!-- <a href="#" onclick="addMapClicked()"><img src="img/add_map.png" id="add-map" alt="Add to Map"></a>
-        <a href="#" onclick="addBookmarkClicked()"><img src="img/add_bookmark.png" id="add-bookmark" alt="Add to Bookmark"></a> -->
         <a href="#" onclick="addMapClicked('신림역 2번 출구, 서울 관악구 신림동')">
             <img src="img/add_map.png" id="add-map" alt="지도에 추가">
         </a>
-        
+
         <a href="#" onclick="addBookmarkClicked('신림역 4번 출구, 서울 관악구 신림동')">
             <img src="img/add_bookmark.png" id="add-bookmark" alt="북마크에 추가">
         </a>
     </div>
 
     <!-- 지도 -->
-    <iframe src="https://map.naver.com/p?c=15.00,0,0,0,dh" frameborder="0"></iframe>
+    <div id="map" style="width: 100%; height: 500px;"></div>
+    <p><em>지도 중심좌표가 변경되면 지도 정보가 표출됩니다</em></p>
 
-<script src="js/popup.js"></script>
-<script src="js/menu.js"></script>
-<script src="js/data.js"></script>
+    <p>
+        <button onclick="setCenter()">지도 중심좌표 이동시키기</button>
+        <button onclick="panTo()">지도 중심좌표 부드럽게 이동시키기</button>
+    </p>
+
+    <p>
+        <button onclick="resizeMap()">지도 크기 바꾸기</button>
+        <button onclick="relayout()">relayout 호출하기</button>
+    </p>
+
+    <p id="result"></p>
+
+    <div id="clickMap" style="width: 100%; height: 350px;"></div>
+    <p><em>지도를 클릭해주세요!</em></p>
+    <div id="clickLatlng"></div>
+
+    <!-- Kakao Maps API -->
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=762ff92faa16d0a8452ef6fe6c7610e6"></script>
+    <script>
+        var map = null; // Declare map variable globally
+
+        // Initialize the map
+        function initMap() {
+            var mapOptions = {
+                center: new kakao.maps.LatLng(37.571, 126.9778),
+                level: 3
+            };
+
+            map = new kakao.maps.Map(document.getElementById('map'), mapOptions);
+
+            // Event listener for center_changed event
+            kakao.maps.event.addListener(map, 'center_changed', function () {
+                var level = map.getLevel();
+                var latlng = map.getCenter();
+
+                var message = '<p>지도 레벨은 ' + level + ' 이고</p>';
+                message += '<p>중심 좌표는 위도 ' + latlng.getLat() + ', 경도 ' + latlng.getLng() + '입니다</p>';
+
+                var resultDiv = document.getElementById('result');
+                resultDiv.innerHTML = message;
+            });
+
+            // Event listener for click event
+            kakao.maps.event.addListener(map, 'click', function (mouseEvent) {
+                var latlng = mouseEvent.latLng;
+
+                var marker = new kakao.maps.Marker({
+                    position: latlng
+                });
+                marker.setMap(map);
+
+                var message = '클릭한 위치의 위도는 ' + latlng.getLat() + ' 이고, ';
+                message += '경도는 ' + latlng.getLng() + ' 입니다';
+
+                var clickLatlngDiv = document.getElementById('clickLatlng');
+                clickLatlngDiv.innerHTML = message;
+            });
+        }
+
+        // Call the initialize function
+        initMap();
+
+        // Functions for map interactions
+        function setCenter() {
+            var moveLatLon = new kakao.maps.LatLng(37.571, 126.9778);
+            map.setCenter(moveLatLon);
+        }
+
+        function panTo() {
+            var moveLatLon = new kakao.maps.LatLng(37.571, 126.9778);
+            map.panTo(moveLatLon);
+        }
+
+        function resizeMap() {
+            var mapContainer = document.getElementById('map');
+            mapContainer.style.width = '800px';
+            mapContainer.style.height = '800px';
+            map.relayout();
+        }
+
+        function relayout() {
+            map.relayout();
+        }
+    </script>
 </body>
+
 </html>
